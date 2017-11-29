@@ -27,7 +27,7 @@ const spaceCraft = {
 };
 
 let t = 0;
-let gameStarted = true;
+let gameStarted = false;
 let turningLeft = false;
 let turningRight = false;
 let throttling = false;
