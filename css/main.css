@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'Gameplay';
+  src: url('./font/Gameplay.ttf');
+}
+
+@font-face {
+  font-family: 'BackTo1982';
+  src: url('./font/BACKTO1982.ttf');
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+#game-canvas {
+  height: 100%;
+  width: 100%;
+  background-color: #1E1E1E;
+}
