@@ -331,42 +331,64 @@ function computeNextState() {
         spaceCraft.y = Math.round(canvas.height - shieldRadius - wallThickness);
       }
     } else {
-      spaceCraft.vx = 0;
-      spaceCraft.vy = 0;
       if (Math.round(spaceCraft.tx) < Math.round(wallThickness)) {
+        spaceCraft.vx = 0;
+        spaceCraft.vy = 0;
         spaceCraft.x += Math.round(wallThickness - spaceCraft.tx);
       }
       if (Math.round(spaceCraft.tx2) < Math.round(wallThickness)) {
+        spaceCraft.vx = 0;
+        spaceCraft.vy = 0;
         spaceCraft.x += Math.round(wallThickness - spaceCraft.tx2);
       }
       if (Math.round(spaceCraft.tx3) < Math.round(wallThickness)) {
+        spaceCraft.vx = 0;
+        spaceCraft.vy = 0;
         spaceCraft.x += Math.round(wallThickness - spaceCraft.tx3);
       }
       if (Math.round(spaceCraft.ty) < Math.round(wallThickness)) {
+        spaceCraft.vx = 0;
+        spaceCraft.vy = 0;
         spaceCraft.y += Math.round(wallThickness - spaceCraft.ty);
       }
       if (Math.round(spaceCraft.ty2) < Math.round(wallThickness)) {
+        spaceCraft.vx = 0;
+        spaceCraft.vy = 0;
         spaceCraft.y += Math.round(wallThickness - spaceCraft.ty2);
       }
       if (Math.round(spaceCraft.ty3) < Math.round(wallThickness)) {
+        spaceCraft.vx = 0;
+        spaceCraft.vy = 0;
         spaceCraft.y += Math.round(wallThickness - spaceCraft.ty3);
       }
       if (Math.round(spaceCraft.tx) > Math.round(canvas.width - wallThickness)) {
+        spaceCraft.vx = 0;
+        spaceCraft.vy = 0;
         spaceCraft.x -= Math.round((spaceCraft.tx - canvas.width) + wallThickness);
       }
       if (Math.round(spaceCraft.tx2) > Math.round(canvas.width - wallThickness)) {
+        spaceCraft.vx = 0;
+        spaceCraft.vy = 0;
         spaceCraft.x -= Math.round((spaceCraft.tx2 - canvas.width) + wallThickness);
       }
       if (Math.round(spaceCraft.tx3) > Math.round(canvas.width - wallThickness)) {
+        spaceCraft.vx = 0;
+        spaceCraft.vy = 0;
         spaceCraft.x -= Math.round((spaceCraft.tx3 - canvas.width) + wallThickness);
       }
       if (Math.round(spaceCraft.ty) > Math.round(canvas.height - wallThickness)) {
+        spaceCraft.vx = 0;
+        spaceCraft.vy = 0;
         spaceCraft.y -= Math.round((spaceCraft.ty - canvas.height) + wallThickness);
       }
       if (Math.round(spaceCraft.ty2) > Math.round(canvas.height - wallThickness)) {
+        spaceCraft.vx = 0;
+        spaceCraft.vy = 0;
         spaceCraft.y -= Math.round((spaceCraft.ty2 - canvas.height) + wallThickness);
       }
       if (Math.round(spaceCraft.ty3) > Math.round(canvas.height - wallThickness)) {
+        spaceCraft.vx = 0;
+        spaceCraft.vy = 0;
         spaceCraft.y -= Math.round((spaceCraft.ty3 - canvas.height) + wallThickness);
       }
     }
