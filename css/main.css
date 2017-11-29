@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'Gameplay';
-  src: url('./font/Gameplay.ttf');
+  src: url('./font/gameplay.ttf');
 }
 
 @font-face {
   font-family: 'BackTo1982';
-  src: url('./font/BACKTO1982.ttf');
+  src: url('./font/backto1982.ttf');
 }
 
 html,
