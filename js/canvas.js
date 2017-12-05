@@ -252,16 +252,20 @@ function drawStartMenu() {
     tempContext.shadowColor = '#F0F';
     tempContext.fillText('Press space to start', 150, 15);
   } else {
-    const spacing = 100;
     context.shadowBlur = 0;
-    for (let i = 0; i < titleLettersCanvas.length; i += 1) {
-      context.drawImage(
-        titleLettersCanvas[i],
-        (canvas.width / 2) + (i * spacing) + (-4 * spacing),
-        (canvas.height / 2) + (5 * Math.sin((Math.TAU * (t / 4)) + (Math.TAU * (i / titleLettersCanvas.length)))) + (-64),
-      );
-    }
-    context.drawImage(startMessageCanvas, (canvas.width / 2) - 150, (canvas.height / 2) + 64);
+    const middleH = (canvas.width / 2);
+    const middleV = (canvas.height / 2);
+    const aDOT = t * 1.57079632679;
+    const tlc = titleLettersCanvas;
+    context.drawImage(tlc[0], middleH - 400, middleV + (5 * Math.sin(aDOT)) + -64);
+    context.drawImage(tlc[1], middleH - 300, middleV + (5 * Math.sin(aDOT + 0.89759790102)) + -64);
+    context.drawImage(tlc[2], middleH - 200, middleV + (5 * Math.sin(aDOT + 1.79519580205)) + -64);
+    context.drawImage(tlc[3], middleH - 100, middleV + (5 * Math.sin(aDOT + 2.69279370308)) + -64);
+    context.drawImage(tlc[4], middleH, middleV + (5 * Math.sin(aDOT + 3.5903916041)) + -64);
+    context.drawImage(tlc[5], middleH + 100, middleV + (5 * Math.sin(aDOT + 3.5903916041)) + -64);
+    context.drawImage(tlc[6], middleH + 200, middleV + (5 * Math.sin(aDOT + 5.38558740615)) + -64);
+    context.drawImage(tlc[7], middleH + 300, middleV + (5 * Math.sin(aDOT + 6.28318530718)) + -64);
+    context.drawImage(startMessageCanvas, middleH - 150, middleV + 64);
     t += 0.05;
     t %= 4;
   }
