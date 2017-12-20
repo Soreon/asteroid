@@ -229,10 +229,10 @@ function drawStartMenu() {
   if (titleLettersCanvas.length === 0) {
     const title = 'AsteroId';
     for (let i = 0; i < title.length; i += 1) {
-      titleLettersCanvas[i] = document.createElement('canvas');
-      titleLettersCanvas[i].width = 128;
-      titleLettersCanvas[i].height = 128;
-      const tempContext = titleLettersCanvas[i].getContext('2d');
+      const tempCanvas = document.createElement('canvas');
+      const tempContext = tempCanvas.getContext('2d');
+      tempCanvas.width = 128;
+      tempCanvas.height = 128;
       tempContext.shadowBlur = 10;
       tempContext.font = '75px BackTo1982';
       tempContext.textAlign = 'center';
@@ -240,6 +240,7 @@ function drawStartMenu() {
       tempContext.fillStyle = '#F0F';
       tempContext.shadowColor = '#F0F';
       tempContext.fillText(title[i], 64, 64);
+      setTimeout(() => { titleLettersCanvas[i] = tempCanvas; }, 200);
     }
     startMessageCanvas.width = 300;
     startMessageCanvas.height = 30;
@@ -251,7 +252,7 @@ function drawStartMenu() {
     tempContext.fillStyle = '#F0F';
     tempContext.shadowColor = '#F0F';
     tempContext.fillText('Press space to start', 150, 15);
-  } else {
+  } else if (titleLettersCanvas.length === 8) {
     context.shadowBlur = 0;
     const middleH = (canvas.width / 2);
     const middleV = (canvas.height / 2);
